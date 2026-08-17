@@ -1,0 +1,19 @@
+<h2>Orders</h2>
+<p>Number of orders: {{ orders.length }}</p>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Customer</th>
+    <th>Status</th>
+    <th>Total</th>
+  </tr>
+
+  @for (order of orders; track order.id) {
+    <tr>
+      <td>{{ order.id }}</td>
+      <td>{{ order.customerId }}</td>
+      <td>{{ order.status }}</td>
+      <td>{{ order.totalAmount }}</td>
+    </tr>
+  }
+</table>
